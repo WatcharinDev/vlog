@@ -28,7 +28,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div class="topnav" id="myTopnav">
-        <a href="#home" class="active">หน้าหลัก</a>
+        <a href="#home" class="active">HandSomeBeer</a>
         <a href="#news">หน้า2</a>
         <a href="#contact">ติดต่อเรา</a>
         <div class="dropdown">
