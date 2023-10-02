@@ -2,10 +2,15 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
-
+import React, { useState } from 'react'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
   const myFunction = () => {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
@@ -23,17 +28,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div class="topnav" id="myTopnav">
-        <a href="#home" class="active">Home</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
+        <a href="#home" class="active">หน้าหลัก</a>
+        <a href="#news">หน้า2</a>
+        <a href="#contact">ติดต่อเรา</a>
         <div class="dropdown">
-          <button class="dropbtn">Dropdown
+          <button class="dropbtn">สินค้า
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
+            <a href="#">ของใช้</a>
+            <a href="#">อุปกรณ์ทำสวน</a>
+            <a href="#">ของเล่น</a>
           </div>
         </div>
         <a href="#about">About</a>
